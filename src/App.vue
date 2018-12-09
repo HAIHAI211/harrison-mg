@@ -1,7 +1,7 @@
 <template>
   <el-container id="app">
     <el-header class="top-nav">
-      <span class="title">极客<span class="title-suffix">社群营销平台</span></span>
+      <span class="title">Harrison<span class="title-suffix">管理后台</span></span>
     </el-header>
     <el-container style="margin-top:5px;">
       <el-aside class="left-side">
@@ -18,12 +18,11 @@
             <template slot="title">
               <span>小程序</span>
             </template>
-            <el-submenu index="run-math-mp">
-              <template slot="title">步好玩</template>
-              <el-menu-item index="rule">规则</el-menu-item>
-              <el-menu-item index="gift">礼品</el-menu-item>
-              <el-menu-item index="adv">广告</el-menu-item>
-              <el-menu-item index="order">订单</el-menu-item>
+            <el-submenu index="harrison">
+              <template slot="title">harrison</template>
+              <el-menu-item index="index">首页</el-menu-item>
+              <el-menu-item index="article">文章</el-menu-item>
+              <el-menu-item index="msg">评论</el-menu-item>
             </el-submenu>
           </el-submenu>
           <el-submenu index="2">

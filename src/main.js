@@ -7,6 +7,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
+import * as api from '@/api'
 import '@/assets/style/index.styl'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
@@ -144,6 +145,7 @@ Vue.use(VueHtml5Editor, {
     // omit,reference to source code of build-in modules
   }
 })
+Vue.prototype.api = api
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

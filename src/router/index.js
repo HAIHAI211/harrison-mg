@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/index'
-import RunMathMp from '@/pages/run-math-mp'
-import RunMathMpRule from '@/pages/run-math-mp/rule'
-import RunMathMpGift from '@/pages/run-math-mp/gift'
-import RunMathMpOrder from '@/pages/run-math-mp/order'
-import RunMathMpAdv from '@/pages/run-math-mp/adv'
+import Harrison from '@/pages/harrison'
+import HarrisonIndex from '@/pages/harrison/index/index'
+import HarrisonArticle from '@/pages/harrison/article'
+import HarrisonMsg from '@/pages/harrison/msg'
 Vue.use(Router)
 
 export default new Router({
@@ -13,34 +12,28 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/run-math-mp/rule',
       name: 'Index',
       component: Index,
       children: [
         {
-          path: '/run-math-mp',
-          name: 'run-math-mp',
-          component: RunMathMp,
+          path: '/harrison',
+          name: 'harrison',
+          component: Harrison,
           children: [
             {
-              path: 'rule',
-              name: 'run-math-mp-rule',
-              component: RunMathMpRule
+              path: 'index',
+              name: 'harrison-index',
+              component: HarrisonIndex
             },
             {
-              path: 'gift',
-              name: 'run-math-mp-gift',
-              component: RunMathMpGift
+              path: 'article',
+              name: 'harrison-article',
+              component: HarrisonArticle
             },
             {
-              path: 'order',
-              name: 'run-math-mp-order',
-              component: RunMathMpOrder
-            },
-            {
-              path: 'adv',
-              name: 'run-math-mp-adv',
-              component: RunMathMpAdv
+              path: 'msg',
+              name: 'harrison-msg',
+              component: HarrisonMsg
             }
           ]
         }

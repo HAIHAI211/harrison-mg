@@ -1,4 +1,4 @@
-import fetch from '../../config'
+import fetch from '@/api/config'
 
 export default {
   getRules (config) { return fetch('/service-system/setting/rules/get', 'get', config) },
