@@ -12,11 +12,13 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/harrison',
       name: 'Index',
       component: Index,
       children: [
         {
           path: '/harrison',
+          redirect: '/harrison/index',
           name: 'harrison',
           component: Harrison,
           children: [

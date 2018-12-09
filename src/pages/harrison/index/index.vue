@@ -6,12 +6,12 @@
 <script>
 export default {
   async mounted () {
-    try {
-      const result = await this.api.harrison.getIndex()
-      console.log('result', result)
-    } catch (e) {
-      console.log(e)
-    }
+    // try {
+    //   const result = await this.api.harrison.getIndex()
+    //   console.log('result', result)
+    // } catch (e) {
+    //   console.log(e)
+    // }
   }
 }
 </script>
