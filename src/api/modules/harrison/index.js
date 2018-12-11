@@ -1,5 +1,6 @@
-import fetch from '@/api/config'
+import {get, post} from '@/api/config'
 
 export default {
-  getIndex (config) { return fetch('/harrison/index/getInfo', 'get', config) }
+  getIndex () { return get('/harrison/index/get') },
+  updateIndex (params) { return post('/harrison/index/update', params) }
 }

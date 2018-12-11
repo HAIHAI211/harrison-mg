@@ -1,5 +1,5 @@
 <template>
-  <div class="app harrison-app">
+  <div class="app hari-mg-app">
     <router-view></router-view>
   </div>
 </template>

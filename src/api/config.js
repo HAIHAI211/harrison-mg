@@ -28,10 +28,18 @@ instance.interceptors.response.use(function (response) {
   return Promise.reject(error)
 })
 
-export default function (url, method, config = {}) {
+function fetch (url, method, config = {}) {
   return instance({
     url,
     method,
     ...config
   })
 }
+export function get (url, params) {
+  return fetch(url, 'get', {params})
+}
+export function post (url, data) {
+  return fetch(url, 'post', {data})
+}
+
+export default fetch

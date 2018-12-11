@@ -6,7 +6,7 @@
     <el-container style="margin-top:5px;">
       <el-aside class="left-side">
         <el-menu
-          default-active="rule"
+          :default-active="defaultActive"
           class="menu"
           :router="true"
           @open="_openMenu"
@@ -18,7 +18,7 @@
             <template slot="title">
               <span>小程序</span>
             </template>
-            <el-submenu index="harrison">
+            <el-submenu index="hari-msg">
               <template slot="title">harrison</template>
               <el-menu-item index="index">首页</el-menu-item>
               <el-menu-item index="article">文章</el-menu-item>
@@ -39,6 +39,30 @@
 <script>
 export default {
   name: 'App',
+  data () {
+    return {
+      defaultActive: ''
+    }
+  },
+  watch: {
+    '$route': {
+      handler (to, from) {
+        console.log(`路由从`, from, '到', to.name)
+        switch (to.name) {
+          case 'hari-mg-index':
+            this.defaultActive = 'index'
+            break
+          case 'hari-mg-article':
+            this.defaultActive = 'article'
+            break
+          case 'hari-mg-msg':
+            this.defaultActive = 'msg'
+            break
+        }
+      },
+      immediate: true
+    }
+  },
   methods: {
     _openMenu () {},
     _closeMenu () {}

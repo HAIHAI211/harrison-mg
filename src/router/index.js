@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/index'
-import Harrison from '@/pages/harrison'
-import HarrisonIndex from '@/pages/harrison/index/index'
-import HarrisonArticle from '@/pages/harrison/article'
-import HarrisonMsg from '@/pages/harrison/msg'
+import HariMg from '@/pages/hari-mg'
+import HariMgIndex from '@/pages/hari-mg/index/index'
+import HariMgArticle from '@/pages/hari-mg/article'
+import HariMgMsg from '@/pages/hari-mg/msg'
 Vue.use(Router)
 
 export default new Router({
@@ -12,30 +12,29 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/harrison',
+      redirect: '/hari-mg/index',
       name: 'Index',
       component: Index,
       children: [
         {
-          path: '/harrison',
-          redirect: '/harrison/index',
-          name: 'harrison',
-          component: Harrison,
+          path: '/hari-mg',
+          name: 'hari-mg',
+          component: HariMg,
           children: [
             {
               path: 'index',
-              name: 'harrison-index',
-              component: HarrisonIndex
+              name: 'hari-mg-index',
+              component: HariMgIndex
             },
             {
               path: 'article',
-              name: 'harrison-article',
-              component: HarrisonArticle
+              name: 'hari-mg-article',
+              component: HariMgArticle
             },
             {
               path: 'msg',
-              name: 'harrison-msg',
-              component: HarrisonMsg
+              name: 'hari-mg-msg',
+              component: HariMgMsg
             }
           ]
         }
